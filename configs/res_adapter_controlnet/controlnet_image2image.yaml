@@ -4,10 +4,10 @@ experiment_name: ""
 
 
 # Model Configs
-personalized_model: "/path/to/model"
+diffusion_model: "/path/to/model"
 model_type: "sd1.5"
 controlnet_model: "/path/to/model"
-res_adapter_model: "models/res_adapter/sd1.5"
+res_adapter_model: "models/res_adapter/resadapter_v1_sd1.5"
 res_adapter_alpha: 1.0
 
 
