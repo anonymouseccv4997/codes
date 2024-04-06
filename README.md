@@ -71,6 +71,8 @@ For anonymous version, we directly provide resadapter weights in this repo.
 
 |Models  | Parameters | Resolution Range | Ratio Range | Links |
 | --- | --- |--- | --- | --- |
+|resadapter_v2_sd1.5| 0.9M | 128 <= x <= 1024 | 0.28 <= r <= 3.5 | ...|
+|resadapter_v2_sdxl| 0.5M | 256 <= x <= 1536 | 0.28 <= r <= 3.5 | ...|
 |resadapter_v1_sd1.5| 0.9M | 128 <= x <= 1024 | 0.5 <= r <= 2 | ... |
 |resadapter_v1_sd1.5_extrapolation| 0.9M | 512 <= x <= 1024 | 0.5 <= r <= 2  | ...|
 |resadapter_v1_sd1.5_interpolation| 0.8M | 128 <= x <= 512 | 0.5 <= r <= 2  | ... |
@@ -163,10 +165,10 @@ https://github.com/anonymouseccv4997/codes/assets/162449909/9211d6a0-544d-49e1-a
 
 ## Usage Tips
 
-- We recommend users to use **interpolation** version to generate lower-resolution images.
-- We recommend users to use **extrapolation** version to generate higher-resolution images.
-- We recommend users to use `resadapter_v1_sd1.5` and `resadapter_v1_sdxl` for deploying resadapter to generate images with broader resolution.
-- We strongly recommend that you use the prompt corresponding to the personalized model, which helps to enhance the quality of the image.
+1. If you are not satisfied with interpolation images, try to increase the alpha of resadapter to 1.0.
+2. If you are not satisfied with extrapolate images, try to choose the alpha of resadapter in 0.3 ~ 0.7.
+3. If you find the images with style conflicts, try to decrease the alpha of resadapter.
+4. If you find resadapter is not compatible with other accelerate lora, try to decrease the alpha of resadapter to 0.5 ~ 0.7.
 
 ## Acknowledgements
 
